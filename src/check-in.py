@@ -6,14 +6,28 @@ class Check_In:
     def __init__(self):
         self.tk = Tk()
         self.tk.title("UOChess Check-In")
+        self.tk.attributes('-fullscreen', True)
 
-root = Tk()
-root.title("UOChess Check-In")
-root.attributes('-fullscreen', True)
+        self.state = True
 
-label = Label(root, text ="Hello World !").pack()
+        self.tk.bind("<F11>", self.toggle_fullscreen)
+        self.tk.bind("<Escape>", self.end_fullscreen)
+    
+    def toggle_fullscreen(self, event=None):
+        self.state = not self.state  # Just toggling the boolean
+        self.tk.attributes("-fullscreen", self.state)
+        return "break"
 
-studentNo = Entry(root, width=10)
+    def end_fullscreen(self, event=None):
+        self.state = False
+        self.tk.attributes("-fullscreen", False)
+        return "break"
+
+
+#label = Label(root, text ="Hello World !").pack()
+
+#studentNo = Entry(root, width=10)
 #studentNo.grid(column=1, row=0)
 
-root.mainloop()
+w = Check_In()
+w.tk.mainloop()
