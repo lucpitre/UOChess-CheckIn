@@ -12,7 +12,7 @@ def memberExists(id):
     for member in cursor:
         if(member[0] == id):
             conn.close()
-            return True
+            return member[1]
     
     conn.close()
     return False
