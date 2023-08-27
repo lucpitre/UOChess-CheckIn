@@ -65,5 +65,3 @@ def resetDBs(): #only for development testing to be removed
     conn.commit()
 
     conn.close()
-
-addVisit(1)
