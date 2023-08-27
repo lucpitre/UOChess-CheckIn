@@ -26,9 +26,9 @@ class Check_In:
         self.btn = Button(self.tk, text="Submit", command=self.submitCheckin)
         self.lblText = StringVar()
         self.label = Label(self.tk, textvariable=self.lblText)
-        self.img = ImageTk.PhotoImage(Image.open('../assets/Transparent_Logo.png'))
+        self.img = ImageTk.PhotoImage(Image.open('./assets/Transparent_Logo.png'))
         self.logo = Label(self.tk, image=self.img)
-        
+
         self.logo.pack(side = "bottom", fill = "both", expand = "yes")
 
         self.entry.pack()
