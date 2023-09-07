@@ -22,7 +22,7 @@ class Check_In:
 
     #create widgets for ui
     def createWidgets(self):
-        self.entry = Entry(self.tk, width=10)
+        self.entry = Entry(self.tk, width=10, font=("arial", 24))
         self.btn = Button(self.tk, text="Submit", command=self.submitCheckin)
         self.lblText = StringVar()
         self.label = Label(self.tk, textvariable=self.lblText)
